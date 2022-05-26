@@ -27,5 +27,5 @@ body {
   padding: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(333.3px, 1fr));
-  gap: 1rem;
+  gap: 1.3rem;
 }
