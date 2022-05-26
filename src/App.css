@@ -49,10 +49,11 @@ body {
 .toggle i {
   margin-left: 1rem;
   margin-top: 0.5rem;
+  cursor: pointer;
 }
 
 .toggle i:hover {
-  transform: rotateY(180deg);
+  transform: rotateY(50deg);
   transition: transform 1000ms ease-in-out;
   color: #333;
 }
