@@ -16,42 +16,43 @@ function App() {
 
   const [users] = useState([
     {
-      id: 11,
+      id: "a",
       name: "Amjad",
       email: "amjad@mail.com",
       password: "BytMig123",
       avtar:
-        "https://image.shutterstock.com/z/stock-vector-isolated-avatar-of-an-afro-american-man-vector-illustration-2012367269.jpg",
+        "https://cdn.shopify.com/s/files/1/1000/1124/products/proposal-ring-book-safe-lord-of-the-rings-ready-to-ship-490548_1400x.jpg?v=1639700182",
       books: [
         {
           id: 1,
-          title: "book 1",
+          title: "The Lord of the Rings",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
+            "The best-selling fantasy novel series, The Lord of the Rings, has only grown in popularity since it was released, spawning a veritable armada of films, theatre, music, artwork, video games, and even board games.",
           imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
-          isRead: true,
+            "https://bestlifeonline.com/wp-content/uploads/sites/3/2020/10/Lord-of-the-Rings-cover.jpg?quality=82&strip=all",
+          isRead: false,
         },
         {
           id: 2,
-          title: "book 2",
+          title: "The Hobbit",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
+            "This relatively brief novel set the stage for J.R.R. Tolkien's later work, The Lord of the Rings. In The Hobbit, or There and Back Again, we follow protagonist Bilbo Baggins and accompany him on a treasure hunt gone wrong.",
           imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
+            "https://tolkienlibrary.com/press/images/most-expensive-the-hobbit.jpg",
+          isRead: true,
         },
         {
           id: 3,
-          title: "book 3",
+          title: "Harry Potter and the Chamber of Secrets",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
-          imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
+            "In the second installment of the Harry Potter series, Harry Potter and the Chamber of Secrets, Harry, Ron, and Hermoine investigate the origin of threatening messages written on the walls of Hogwarts and the attacker of several petrified students and staff. Enemies of the heir, beware.",
+          imgURL: "https://images.wisegeek.com/harry-potter.jpg",
+          isRead: true,
         },
       ],
     },
     {
-      id: 22,
+      id: "b",
       name: "John",
       email: "john@mail.com",
       password: "BytMig123",
@@ -64,29 +65,31 @@ function App() {
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
           imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
+            "https://books.ninja-squad.com/public/images/vue/xebook-cover.png.pagespeed.ic.Fn4QnmoYfd.webp",
           isRead: true,
         },
         {
           id: 2,
-          title: "React 2",
+          title: "THE ROAD TO REACT",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
+            "Introduction to React From project setup to understanding the fundamentals of JavaScript for React, we will cover everything to get you started in this new environment.",
           imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
+            "https://www.roadtoreact.com/static/84193e3d1b0b225941306d53bd24e4ba/d12c9/cover.png",
+          isRead: false,
         },
         {
           id: 3,
-          title: "TypeScript 3",
+          title: "JavaScript and jQuery",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
+            "A two-book set for web designers and front-end developers This two-book set combines the titles HTML & CSS: Designing and Building Web Sites and JavaScript & jQuery: Interactive Front-End Development.",
           imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
+            "https://globalartsbooks.com/wp-content/uploads/2021/05/9781118907443.jpg",
+          isRead: false,
         },
       ],
     },
     {
-      id: 33,
+      id: "c",
       name: "Joakim",
       email: "joakim@mail.com",
       password: "BytMig123",
@@ -95,28 +98,30 @@ function App() {
       books: [
         {
           id: 1,
-          title: "Tailwind 1",
+          title: "The Elements of Pizza by Ken Forkish",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
+            "From the James Beard and IACP award-winning author of “Flour Water Salt Yeast” comes “The Elements of Pizza,” an all-encompassing manual on the world’s most popular dish. This guide breaks down every step of the pizza-making process: choosing the right type of dough from Ken’s dozen or so tried-and-true recipes, shaping your pizza like a pro, selecting the best cheese and toppings for your home setup, and more. His clear, expert instructions will have you making, stretching, and cooking pizzas with the confidence of a professional pizzaiolo in no time at all.",
           imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
+            "https://cdn.shopify.com/s/files/1/0205/9582/products/TheElementsofPizza_Hero.jpg?crop=center&height=2048&v=1637954990&width=2048",
           isRead: true,
         },
         {
           id: 2,
-          title: "Java 2",
+          title: "Mastering Pizza by Marc Vetri",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
+            "Mastering Pizza” is a revelatory guide to making delicious pizza at home. Using his trademark precision, award-winning chef Marc Vetri teaches you to work with the oven and equipment you have at home to make incredible pizzas every time. This book is the culmination of years of recipe research in Italy and honing in America, and features a variety of doughs – all with varying hydration levels – that enable home cooks to achieve the same results as their favorite pizza restaurants. Transporting imagery from Italy paired with step-by-step photos to demystify the process will help put you in the pizza mindset, all the better for taking in the expert-level knowledge offered up in this book.",
           imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
+            "https://cdn.shopify.com/s/files/1/0408/5655/1588/products/MasteringPizza.jpg?crop=center&height=2048&v=1637960012&width=2048",
+          isRead: false,
         },
         {
           id: 3,
-          title: "Python 3",
+          title: "Chicken Masala Biryani",
           description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vero assumenda, aliquam aut magni ducimus deleniti, dolor accusantium corrupti blanditiis voluptas officia earum perferendis consectetur atque eveniet fuga tenetur perspiciatis.",
+            "I cook with spices almost everyday and when it comes to Indian food I never look at a recipe. This Chicken Masala Biryani is one of those that I have probably adjusted the spices a few times already.Biryani is my favorite Indian dish.  I therefore make it my mission to make a delicious one or there’s no point eating it. ",
           imgURL:
-            "https://images.unsplash.com/photo-1513001900722-370f803f498d?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987",
+            "https://www.tamarindnthyme.com/wp-content/uploads/2019/08/Chicken-Masala-Biryani3.jpg.webp",
+          isRead: true,
         },
       ],
     },

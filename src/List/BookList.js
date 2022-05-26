@@ -17,7 +17,7 @@ function ListBook({ title, description, imgURL, isRead }) {
         <img src={imgURL} alt="book-cover" />
       </div>
       <div className="details">
-        <div>
+        <div className="info">
           <h2>{title}</h2>
           <p>{description}</p>
         </div>

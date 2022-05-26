@@ -12,7 +12,7 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 915px) {
   .container {
     width: auto;
     margin: 0;
@@ -33,6 +33,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(333.3px, 1fr));
   gap: 1.3rem;
+  height: calc(100vh - 106px);
 }
 
 .hidden {
