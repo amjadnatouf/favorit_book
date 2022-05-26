@@ -1,16 +1,15 @@
 .card {
-  width: 100%;
   display: flex;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
   border-radius: 0.8rem;
 }
 
-.img-container {
+.card .img-container {
   height: 300px;
   width: 45%;
 }
 
-.img-container img {
+.card .img-container img {
   border-radius: 0.8rem;
   height: 100%;
   width: 100%;
@@ -20,7 +19,7 @@
 .card:nth-child(even) {
   flex-direction: row-reverse;
 }
-.details {
+.card .details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -28,13 +27,13 @@
   padding: 2rem 1rem;
 }
 
-.details h2 {
+.card .details h2 {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 
-.details p {
+.card .details p {
   text-align: start;
 }
 .book-links ul {
@@ -52,8 +51,8 @@
 }
 
 .book-links .btn,
-.not,
-.active {
+.book-links .not,
+.book-links .active {
   padding: 0.3rem 1rem;
   border-radius: 0.8rem;
 }
@@ -66,10 +65,10 @@
 .book-links .btn-dark {
   background-color: #ddd;
 }
-.active {
+.book-links .active {
   background-color: green;
 }
 
-.not {
+.book-links .not {
   background: red;
 }

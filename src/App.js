@@ -120,7 +120,6 @@ function App() {
 
   return (
     <div>
-      <div> {console.log(users)}</div>
       <Navbar
         isLoggedIn={isLoggedIn}
         setIsLoggedIn={setIsLoggedIn}
@@ -129,27 +128,29 @@ function App() {
         email={admin.email}
       />
       <div className="container">
-        {!isLoggedIn ? (
-          <div>
-            <LoginForm
-              setIsLoggedIn={setIsLoggedIn}
-              users={users}
-              setAdmin={setAdmin}
-            />
-          </div>
-        ) : (
-          <div className="book-container">
-            {admin.books.map((book) => (
-              <GridBook
-                key={book.id}
-                title={book.title}
-                description={book.description}
-                imgURL={book.imgURL}
-                isRead={book.isRead}
+        <div>
+          {!isLoggedIn ? (
+            <div className="lonin">
+              <LoginForm
+                setIsLoggedIn={setIsLoggedIn}
+                users={users}
+                setAdmin={setAdmin}
               />
-            ))}
-          </div>
-        )}
+            </div>
+          ) : (
+            <div className="book-container">
+              {admin.books.map((book) => (
+                <GridBook
+                  key={book.id}
+                  title={book.title}
+                  description={book.description}
+                  imgURL={book.imgURL}
+                  isRead={book.isRead}
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
