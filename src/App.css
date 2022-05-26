@@ -12,7 +12,12 @@ body {
   width: 80%;
   margin: 0 auto;
 }
-
+@media screen and (max-width: 767px) {
+  .container {
+    width: auto;
+    margin: 0;
+  }
+}
 .btn {
   padding: 0.6em 1.4em;
   font-weight: 600;

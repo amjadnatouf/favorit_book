@@ -2,8 +2,6 @@
   background-color: #fff;
   border-radius: 0.8rem;
   box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.7);
-  /* width: 80%; */
-  /* margin: 0 auto; */
 }
 .grid-card .img-container {
   height: 300px;
@@ -41,14 +39,14 @@
   gap: 15px;
 }
 
-.grid-links li {
+.grid-links ul li {
   text-decoration: none;
   cursor: pointer;
 }
 
 .grid-links .g-btn,
-.g-not,
-.g-active {
+.grid-links .g-not,
+.grid-links .g-active {
   padding: 0.3rem 1rem;
   border-radius: 0.8rem;
   gap: 1px;
@@ -62,11 +60,11 @@
 .grid-links .g-dark {
   background-color: #ddd;
 }
-.g-active {
+.grid-links .g-active {
   background-color: green;
   color: #fff;
 }
 
-.g-not {
+.grid-links .g-not {
   background: red;
 }
