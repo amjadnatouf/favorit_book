@@ -3,12 +3,16 @@ import Navbar from "./navigation/Navbar";
 import "./App.css";
 import LoginForm from "./login/LoginForm";
 import GridBook from "./Grid/BookGrid";
-// import ListBook from "./List/BookList";
+import ListBook from "./List/BookList";
 import { useState } from "react";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [admin, setAdmin] = useState({});
+  const [show, setShow] = useState(true);
+  // const toggel = () => {
+  //   setShow(!show);
+  // };
 
   const [users] = useState([
     {
@@ -128,19 +132,45 @@ function App() {
         email={admin.email}
       />
       <div className="container">
+        <div className={`${!isLoggedIn ? "hidden" : "toggle"}`}>
+          <i
+            className="fa-solid fa-bars"
+            onClick={(e) => {
+              setShow(true);
+            }}
+          ></i>
+          <i
+            className="fa-solid fa-border-all"
+            onClick={(e) => {
+              setShow(false);
+            }}
+          ></i>
+        </div>
         <div>
           {!isLoggedIn ? (
-            <div className="lonin">
+            <div className="login">
               <LoginForm
                 setIsLoggedIn={setIsLoggedIn}
                 users={users}
                 setAdmin={setAdmin}
               />
             </div>
-          ) : (
+          ) : !show ? (
             <div className="book-container">
               {admin.books.map((book) => (
                 <GridBook
+                  key={book.id}
+                  title={book.title}
+                  description={book.description}
+                  imgURL={book.imgURL}
+                  isRead={book.isRead}
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="list-container">
+              {admin.books.map((book) => (
+                <ListBook
                   key={book.id}
                   title={book.title}
                   description={book.description}

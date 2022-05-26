@@ -34,3 +34,25 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(333.3px, 1fr));
   gap: 1.3rem;
 }
+
+.hidden {
+  display: none;
+}
+
+.toggle {
+  text-align: end;
+  font-size: 20px;
+  color: #164d81;
+  padding: 0 1rem;
+}
+
+.toggle i {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.toggle i:hover {
+  transform: rotateY(180deg);
+  transition: transform 1000ms ease-in-out;
+  color: #333;
+}
