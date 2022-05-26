@@ -20,12 +20,17 @@
   flex-direction: row-reverse;
 }
 .card .details {
-  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: #fff;
   padding: 2rem 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .card .details {
+    flex: 1;
+  }
 }
 
 .card .details h2 {
@@ -37,6 +42,7 @@
 .card .details p {
   text-align: start;
 }
+
 @media screen and (max-width: 767px) {
   .book-links {
     display: none;
