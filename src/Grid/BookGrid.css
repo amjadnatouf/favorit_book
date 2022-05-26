@@ -1,0 +1,69 @@
+.grid-card {
+  background-color: #fff;
+  border-radius: 0.8rem;
+}
+.grid-card .img-container {
+  height: 300px;
+  width: 100%;
+}
+.grid-card .img-container img {
+  border-radius: 0.8rem;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.grid-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.grid-details h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.grid-details p {
+  text-align: start;
+  margin-bottom: 2rem;
+}
+
+.grid-links ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.grid-links li {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.grid-links .g-btn,
+.g-not,
+.g-active {
+  padding: 0.3rem 1rem;
+  border-radius: 0.8rem;
+  gap: 1px;
+}
+
+.grid-links .g-secondary {
+  background-color: #272e71;
+  color: #fff;
+}
+
+.grid-links .g-dark {
+  background-color: #ddd;
+}
+.g-active {
+  background-color: green;
+  color: #fff;
+}
+
+.g-not {
+  background: red;
+}
