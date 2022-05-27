@@ -1,7 +1,6 @@
 .card {
   display: flex;
   margin: 1rem 0;
-  border-radius: 0.8rem;
   box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, 0.7);
 }
 
@@ -11,17 +10,14 @@
 }
 
 .card .img-container img {
-  border-radius: 0.8rem;
   height: 100%;
   width: 100%;
-  object-fit: cover;
 }
 
 .card:nth-child(even) {
   flex-direction: row-reverse;
 }
 .card .details {
-  border-radius: 0.8rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -85,6 +81,7 @@
 }
 .book-links .active {
   background-color: green;
+  color: #fff;
 }
 
 .book-links .not {
