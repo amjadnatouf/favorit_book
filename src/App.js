@@ -2,18 +2,15 @@ import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./navigation/Navbar";
 import Signin from "./Signin/Signin";
-// import LoginForm from "./login/LoginForm";
-import GridBook from "./Grid/BookGrid";
+import BooksView from "./books/BooksView";
 import BookView from "./bookview/BookView";
-import ListBook from "./List/BookList";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [admin, setAdmin] = useState({});
   const [book, setBook] = useState({});
-  const [id, setId] = useState(null);
-  const [show, setShow] = useState(true);
-  // const toggel = () => {  //   setShow(!show); // };
+  const [id, setId] = useState(0);
+  const [drop, setDrop] = useState(false);
 
   const [users] = useState([
     {
@@ -138,7 +135,7 @@ function App() {
   ]);
 
   return (
-    <div>
+    <div onClick={() => drop && setDrop(false)}>
       {!isLoggedIn ? (
         <Signin
           setIsLoggedIn={setIsLoggedIn}
@@ -153,27 +150,15 @@ function App() {
             name={admin.name}
             avtar={admin.avtar}
             email={admin.email}
+            drop={drop}
+            setDrop={setDrop}
           />
-          <div className={`${!isLoggedIn ? "hidden" : "toggle"}`}>
-            <i
-              className="fa-solid fa-bars"
-              onClick={(e) => {
-                setShow(true);
-              }}
-            ></i>
-            <i
-              className="fa-solid fa-border-all"
-              onClick={(e) => {
-                setShow(false);
-              }}
-            ></i>
-          </div>
-          {show ? (
+          {!id ? (
             <div className="container">
               <h2 className="main-title"> {admin.name}s bästa böckerna:</h2>
               <div className="grid-container">
                 {admin.books.map((el) => (
-                  <GridBook
+                  <BooksView
                     key={el.id}
                     id={el.id}
                     title={el.title}
@@ -197,6 +182,7 @@ function App() {
                   description={book.description}
                   imgURL={book.imgURL}
                   body={book.body}
+                  setId={setId}
                 />
               }
             </div>

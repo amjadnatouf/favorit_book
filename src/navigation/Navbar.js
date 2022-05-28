@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import "./navbar.css";
 
-function Navbar({ isLoggedIn, setIsLoggedIn, name, avtar, email }) {
-  const toggleLogin = (e) => {
+function Navbar({
+  isLoggedIn,
+  setIsLoggedIn,
+  name,
+  avtar,
+  email,
+  drop,
+  setDrop,
+}) {
+  const toggleLogin = () => {
     setIsLoggedIn(!isLoggedIn);
     setDrop(!drop);
   };
-  const [drop, setDrop] = useState(false);
-  const menu = (e) => setDrop(!drop);
+  const menu = () => setDrop(!drop);
   return (
     <div>
       <nav className="navbar">

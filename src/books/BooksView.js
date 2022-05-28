@@ -1,28 +1,23 @@
 import React, { useState } from "react";
-import "./BookGrid.css";
+import "./BooksView.css";
 
-function GridBook({
+function BooksView({
   id,
   title,
   description,
   imgURL,
   isRead,
-  setId,
   el,
   setBook,
+  setId,
 }) {
   const [status, setStatus] = useState(isRead);
 
-  // const set = () => {
-  //   setId(id);
-  //   console.log(id)
-
-  // };
-
   const set = (e) => {
     e.preventDefault();
+    setId(id);
     const _el = el;
-    console.log(_el);
+    // console.log(_el);
     setBook({ ..._el });
   };
 
@@ -38,20 +33,22 @@ function GridBook({
       <div className="book-details">
         <h2>{title}</h2>
         <p>{description}</p>
-      </div>
-      <div className="links">
-        <span className="read" onClick={set}>
-          w.read
-        </span>
-        <span className={`${status ? "new" : "old"}`}>
-          {!status ? "new" : "old"}
-        </span>
-        <span className="read again" onClick={reset}>
-          r.again
-        </span>
+        <div className="book-links">
+          <ul>
+            <li className="view btn-dark" onClick={set}>
+              view book
+            </li>
+            <li className={`${status ? " new" : " read"}`}>
+              {status ? "currently" : "read"}
+            </li>
+            <li className="again" onClick={reset}>
+              {!status ? "read again" : "klart"}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
 }
 
-export default GridBook;
+export default BooksView;
