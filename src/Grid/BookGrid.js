@@ -1,39 +1,54 @@
 import React, { useState } from "react";
 import "./BookGrid.css";
 
-function GridBook({ title, description, imgURL, isRead }) {
+function GridBook({
+  id,
+  title,
+  description,
+  imgURL,
+  isRead,
+  setId,
+  el,
+  setBook,
+}) {
   const [status, setStatus] = useState(isRead);
 
-  const changeStatus = () => {
-    !status ? setStatus(!status) : console.log("already readed");
+  // const set = () => {
+  //   setId(id);
+  //   console.log(id)
+
+  // };
+
+  const set = (e) => {
+    e.preventDefault();
+    const _el = el;
+    console.log(_el);
+    setBook({ ..._el });
   };
+
   const reset = () => {
-    status && setStatus(!status);
+    setStatus(!status);
   };
 
   return (
-    <div className="grid-card">
+    <div className="book-card">
       <div className="img-container">
         <img src={imgURL} alt="book-cover" />
       </div>
-      <div className="grid-details">
-        <div>
-          <h2>{title}</h2>
-          <p>{description}</p>
-        </div>
-        <div className="grid-links">
-          <ul>
-            <li className="g-btn g-secondary" onClick={changeStatus}>
-              read book
-            </li>
-            <li className={`${status ? "g-active" : "g-not"}`}>
-              {status ? "läst" : "inte"}
-            </li>
-            <li className="g-btn g-dark" onClick={reset}>
-              read again
-            </li>
-          </ul>
-        </div>
+      <div className="book-details">
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
+      <div className="links">
+        <span className="read" onClick={set}>
+          w.read
+        </span>
+        <span className={`${status ? "new" : "old"}`}>
+          {!status ? "new" : "old"}
+        </span>
+        <span className="read again" onClick={reset}>
+          r.again
+        </span>
       </div>
     </div>
   );
