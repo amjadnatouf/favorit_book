@@ -1,10 +1,10 @@
 import React from "react";
-import "./Signin.css";
+import "./LogIn.css";
 import { useState } from "react";
 import img1 from "./img/bg.svg";
 import img2 from "./img/avatar.svg";
 
-const Signin = ({ setIsLoggedIn, users, setAdmin }) => {
+const LogIn = ({ setIsLoggedIn, users, setAdmin }) => {
   let [email, setEmail] = useState("");
   let [password, setPassword] = useState("");
 
@@ -71,4 +71,4 @@ const Signin = ({ setIsLoggedIn, users, setAdmin }) => {
   );
 };
 
-export default Signin;
+export default LogIn;

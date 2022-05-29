@@ -54,7 +54,7 @@
 .post-card .post-links {
   position: relative;
   width: 100%;
-  bottom: 20px;
+  /* bottom: 20px; */
   right: 0;
 }
 .post-links ul {

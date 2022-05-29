@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./navigation/Navbar";
-import Signin from "./Signin/Signin";
+import LogIn from "./login/LogIn";
 import BooksView from "./books/BooksView";
 import BookView from "./bookview/BookView";
 
@@ -137,7 +137,7 @@ function App() {
   return (
     <div onClick={() => drop && setDrop(false)}>
       {!isLoggedIn ? (
-        <Signin
+        <LogIn
           setIsLoggedIn={setIsLoggedIn}
           users={users}
           setAdmin={setAdmin}
