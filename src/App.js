@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import Navbar from "./navigation/Navbar";
 import LogIn from "./login/LogIn";
@@ -11,6 +11,16 @@ function App() {
   const [book, setBook] = useState({});
   const [id, setId] = useState(0);
   const [drop, setDrop] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("email");
+    console.log(token);
+    if (token) {
+      setIsLoggedIn(true);
+      const _user = users.filter((user) => user.email === token);
+      setAdmin(..._user);
+    }
+  }, []);
 
   const [users] = useState([
     {

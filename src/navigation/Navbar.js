@@ -11,6 +11,7 @@ function Navbar({
   setDrop,
 }) {
   const toggleLogin = () => {
+    localStorage.removeItem("email");
     setIsLoggedIn(!isLoggedIn);
     setDrop(!drop);
   };

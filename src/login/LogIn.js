@@ -14,6 +14,8 @@ const LogIn = ({ setIsLoggedIn, users, setAdmin }) => {
       (user) => user.email === email && user.password === password
     );
     // console.log(_user);
+    localStorage.setItem("email", email);
+
     if (_user.length !== 0) {
       setIsLoggedIn(true);
       setAdmin(..._user);
